@@ -1,0 +1,66 @@
+plugins {
+    id 'java'
+    id "idea"
+    id "application"
+}
+
+
+group 'com.tuyano'
+version '1.0-SNAPSHOT'
+
+mainClassName = "com.tuyano.gradle.App"
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+//    jcenter()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+//    testCompile 'junit:junit:4.12'
+}
+/*task hello {
+   doLast{
+        println();
+        println("========================================");
+        println("Welcome to Gradle !!!!");
+        println("========================================");
+        println();
+    }
+    doLast {
+        println("=============LAST=============");
+        println("This is doLast action!");
+        println("=============LAST=============");
+    }
+    doFirst {
+        println();
+        println("=============START=============");
+        println("This is doFirst action");
+        println("=============START=============");
+    }
+
+    doLast{
+        def total = 0;
+        for(def i in 1..num.toInteger()){
+            total += i;
+        }
+        println("total : " + total);
+    }
+
+    def arr=["one","two","three","four","five"];
+    arr.each{s ->
+        task "$s" {
+            doLast {
+                println("this is $s task.");
+            }
+        }
+    }
+
+
+}*/
+task doit(dependsOn: [jar, run]) {
+    doLast{
+        println("******   do it !!!!  ********")
+    }
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tuyano.gradle.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-04T07:15:42" hostname="DESKTOP-E4QJ231" time="0.004">
+  <properties/>
+  <testcase name="testApp" classname="com.tuyano.gradle.AppTest" time="0.004"/>
+  <system-out><![CDATA[Hi,hoge. Welcome to you&Ryu Channel !!!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

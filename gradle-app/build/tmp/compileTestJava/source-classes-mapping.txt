@@ -1,0 +1,2 @@
+com/tuyano/gradle/AppTest.java
+ com.tuyano.gradle.AppTest

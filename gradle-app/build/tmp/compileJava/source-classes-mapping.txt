@@ -1,0 +1,2 @@
+com/tuyano/gradle/App.java
+ com.tuyano.gradle.App
