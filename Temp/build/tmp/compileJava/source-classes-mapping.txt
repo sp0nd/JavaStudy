@@ -1,0 +1,4 @@
+com/tuyano/gradle/Hello2030.java
+ com.tuyano.gradle.Hello2030
+com/tuyano/gradle/MakeArray.java
+ com.tuyano.gradle.MakeArray
