@@ -36,11 +36,6 @@ public class BugGame {
         x=random.nextInt(row);      y=random.nextInt(col);
 
         int[][] Array2D = new int[row][col];
-
-        for (int i = 0; i < row; i++)
-            for (int j = 0; j < col; j++)
-                Array2D[i][j] = 0;
-
         Array2D[x][y]=1;  // 1로 배열원소 초기화
 
         System.out.println("Start Point : " + x + "," + y );

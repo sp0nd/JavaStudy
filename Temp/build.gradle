@@ -5,7 +5,15 @@ plugins {
 
 /*mainClassName = "com.tuyano.gradle.Hello2030"*/
 /*mainClassName = "com.tuyano.gradle.BugGame"*/
-mainClassName = "com.tuyano.gradle.FenceBugGame"
+/*mainClassName = "com.tuyano.gradle.FenceBugGame"*/
+/*mainClassName = "com.tuyano.gradle.MatrixAddAndMul"*/
+/*mainClassName = "com.tuyano.gradle.Birds"*/
+//mainClassName = "com.tuyano.gradle.ClassMatrix"
+//mainClassName = "com.tuyano.gradle.BookArray"
+//mainClassName = "com.tuyano.gradle.ColorPointEX"
+//mainClassName = "com.tuyano.gradle.Inheritance"
+mainClassName = "com.tuyano.gradle.Instanceof"
+
 group 'org.example'
 version '1.0-SNAPSHOT'
 

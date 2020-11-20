@@ -1,4 +1,42 @@
+com/tuyano/gradle/MatrixAddAndMul.java
+ com.tuyano.gradle.MatrixAddAndMul
+com/tuyano/gradle/ColorPointEX.java
+ com.tuyano.gradle.ColorPoint
+ com.tuyano.gradle.ColorPointEX
+ com.tuyano.gradle.Point
+com/tuyano/gradle/ClassMatrix.java
+ com.tuyano.gradle.CalculateAndSave
+ com.tuyano.gradle.ClassMatrix
+ com.tuyano.gradle.Matrix
+com/tuyano/gradle/Inheritance.java
+ com.tuyano.gradle.Inheritance
+ com.tuyano.gradle.Person
+ com.tuyano.gradle.Student
+com/tuyano/gradle/CArray.java
+ com.tuyano.gradle.CArray
+ com.tuyano.gradle.Circle
+com/tuyano/gradle/MatrixClass.java
+ com.tuyano.gradle.MatrixClass
+ com.tuyano.gradle.MatrixClass$Calculator
+ com.tuyano.gradle.MatrixClass$Matrix
+com/tuyano/gradle/Book.java
+ com.tuyano.gradle.Book
 com/tuyano/gradle/Hello2030.java
  com.tuyano.gradle.Hello2030
-com/tuyano/gradle/MakeArray.java
- com.tuyano.gradle.MakeArray
+com/tuyano/gradle/FenceBugGame.java
+ com.tuyano.gradle.FenceBugGame
+com/tuyano/gradle/BookArray.java
+ com.tuyano.gradle.BookArray
+ com.tuyano.gradle.BookInformation
+com/tuyano/gradle/Rectangle.java
+ com.tuyano.gradle.Rectangle
+com/tuyano/gradle/BugGame.java
+ com.tuyano.gradle.BugGame
+com/tuyano/gradle/Birds.java
+ com.tuyano.gradle.Birds
+com/tuyano/gradle/Instanceof.java
+ com.tuyano.gradle.Instanceof
+ com.tuyano.gradle.building
+ com.tuyano.gradle.hotel
+ com.tuyano.gradle.restaurant
+ com.tuyano.gradle.shoppingmall
