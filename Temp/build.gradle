@@ -12,8 +12,8 @@ plugins {
 //mainClassName = "com.tuyano.gradle.BookArray"
 //mainClassName = "com.tuyano.gradle.ColorPointEX"
 //mainClassName = "com.tuyano.gradle.Inheritance"
-mainClassName = "com.tuyano.gradle.Instanceof"
-
+//mainClassName = "com.tuyano.gradle.Instanceof"
+mainClassName = "com.tuyano.gradle.Linkedlist"
 group 'org.example'
 version '1.0-SNAPSHOT'
 

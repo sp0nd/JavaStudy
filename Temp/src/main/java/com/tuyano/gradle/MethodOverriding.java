@@ -32,9 +32,16 @@ class circle extends Shape{
 
 public class MethodOverriding {
     static void paint(Shape sp){
-        
+        sp.draw();
     }
     public static void main(String[] args) {
+        Line line = new Line();
+
+        paint(line);
+        paint (new Shape());
+        paint (new Line());
+        paint (new Rect());
+        paint (new circle());
 
     }
 }
