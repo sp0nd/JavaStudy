@@ -10,10 +10,10 @@ class Node{
         next= null;
     }
 }
-class iteratorList{
+class Iterator{
     public List list;
     public Node current;
-    iteratorList(List l){
+    Iterator(List l){
         list=l;
         current=l.first;
     }
@@ -27,28 +27,15 @@ class iteratorList{
     boolean NotNull(){
         if(current==null) return true;
         else return false;
-    }
+        }
     boolean NextNotNull(){
         if(current.next==null) return true;
         else return false;
     }
-    int getLength(){
-        int count=0;
-        while(current != null){
-            count++;
-            current=current.next;
-        }
-        current=this.list.first;
-        return count;
-    }
-    void sort(){
-        int min;
-        int count=this.getLength();
-
-    }
 
 }
 class List {
+    public Iterator iterator;
     public Node first; //Declaring a Variable in a Node
 
     public List(){ //Generates a node
@@ -66,58 +53,65 @@ class List {
     public List(Node n){ //Set the next of the node and connect it.
         first=n;
     }
-    void addBackList(List l){
-        Node F,B;
-        B=this.first;
-        F=B;
-        if(B==null )
+    List addBackList(List l){
+        Node saveNode,thisNode;
+        thisNode=this.first;
+        saveNode=thisNode;
+        if(thisNode==null )
             this.first=l.first;
         else {// this.first != null
-            while (B != null) {
-                F = B;
-                B = B.next;
+            while (thisNode != null) {
+                saveNode = thisNode;
+                thisNode = thisNode.next;
             }
-            F.next = l.first;
+            saveNode.next = l.first;
         }
-    }
-    void addFrontList(List l){
-        Node B,F;
-        B=l.first;
-        F=B;
-        while(B != null){
-            F=B;
-            B=B.next;
-        }
-        F.next=this.first;
-    }
-
-    List mergeList(List l) {
-        if(first==null || l.first==null) {
-        if(first == null )
-            first = l.first;
-        else // l.first == null
-            l.first = first;
         return this;
+    }
+    List addFrontList(List l){
+        Node saveNode,thisNode;
+        thisNode=l.first;
+        saveNode=thisNode;
+        if(thisNode==null)
+            return this;
+        else {
+            while (thisNode != null) {
+                saveNode = thisNode;
+                thisNode = thisNode.next;
+            }
+            saveNode.next=this.first;
         }
-        Node bn,fn,temp; //bn=BackNode,fn=FrontNode,cbn=CloneBackNode,cfn=CloneFrontNode
-        fn=first;
-        bn=l.first;
+
+        return this;
+    }
+
+    List SimpleMergeList(List l) {
+        if(first==null || l.first==null) {
+            if (first == null)
+                first = l.first;
+            else // l.first == null
+                l.first = first;
+            return this;
+        }
+        Node thisNode,defaultNode,saveNode; //bn=BackNode,fn=FrontNode,cbn=CloneBackNode,cfn=CloneFrontNode
+        thisNode=first;
+        defaultNode=l.first;
         while(true){
-            temp=bn.next;
-            bn.next=fn.next;
-            fn.next=bn;
-            if(fn.next.next==null){
-                fn.next.next=temp;
+            saveNode=defaultNode.next;
+            defaultNode.next=thisNode.next;
+            thisNode.next=defaultNode;
+            if(thisNode.next.next==null){
+                thisNode.next.next=saveNode;
                 break;
             }
-            else if(temp==null){
+            thisNode=thisNode.next.next;
+            if(saveNode==null){
                 break;
             }
-            bn=temp;
-            fn=fn.next.next;
+            defaultNode=saveNode;
 
         }
-       l.first=first; //Copy yourself to 'List l'
+        l.first=first; // Copy itself to 'List l'
         return this;
     }
     public void addFrontNode(int data){
@@ -141,60 +135,208 @@ class List {
         temp.next = node;
     }
     public void showList(){
-        Node B = this.first;
+        Node thisNode = this.first;
         int i = 0;
-        while(B != null){
-            System.out.println("Index " + i++ + " : " + B.data);
-            B = B.next;
+        while(thisNode != null){
+            System.out.println("Index " + i++ + " : " + thisNode.data);
+            thisNode = thisNode.next;
         }
         System.out.println();
     }
+    public void showList(int a){
+        Node thisNode = this.first;
+        int i = 0;
+        while(thisNode != null){
+            System.out.println("Index " + i++ + " : " + thisNode.data);
+            thisNode = thisNode.next;
+        }
+    }
+    List sort(){
+        if (first == null) {
+            System.out.println("This list is empty.");
+            return this;
+        }
+        int count = this.getLength();
+        Node thisNode;
+        Node preNode;
+        int min;
+        Node minNode = null;
+        Node minpreNode = null;
+        for (int i = 0; i < count; i++) {
+            thisNode = first;
+            preNode = null;
+            min = Integer.MAX_VALUE;
+            for (int j = 0; j < i; j++) {
+                preNode = thisNode;
+                thisNode = thisNode.next;
+            }
+            while (thisNode != null) {
+                if (min > thisNode.data) {
+                    min = thisNode.data;
+                    minpreNode = preNode;
+                    minNode = thisNode;
+                }
+                preNode = thisNode;
+                thisNode = thisNode.next;
+            }
+            if (i == 0) {
+                minpreNode.next = minNode.next;
+                minNode.next = first;
+                first = minNode;
+            } else {
+                thisNode = first;
+                preNode = null;
+                for (int j = 0; j < i; j++) {
+                    preNode = thisNode;
+                    thisNode = thisNode.next;
+                }
+                if (thisNode == minNode) {
+                    continue;
+                } else {
+                    minpreNode.next = minNode.next;
+                    minNode.next = preNode.next;
+                    preNode.next = minNode;
+                }
+            }
+        }
+        return this;
+    }
+    int getLength(){
+        Node node=first;
+        int count=0;
+        while(node != null){
+            count++;
+            node=node.next;
+        }
+        return count;
 
+    }
+    void simpleSplit(List l){
+        Node temp = first;
+        int Length = this.getLength()/2;
+        int count=1;
+        while( count !=Length ) {
+            temp = temp.next;
+            count++;
+        }
+        l.first=temp.next;
+        temp.next=null;
+    }
+    void MergeList(List l){
+        this.SimpleMergeList(l).sort();
+        l.first=this.first;
+    }
+    List[] Split(List[] a){
+        List l =this;
+        for(int i=0;i<l.getLength();i++)a[i]=new List();
+        a[0]=l;
+        int count=0,idx=1;
+        while(a.length != l.getLength()) {
+            a[count].SimpleMergeList(a[idx]);
+            idx++;
+            if(a[count].getLength()==1) count++;
+        }
+        return a;
+    }
+
+    void MakeList(int num){
+        List l=this;
+        Random random = new Random();
+        for(int i=1;i<num+1;i++)
+            l.addBackNode(random.nextInt(100));
+    }
 
 }
 public class Linkedlist {
     public static void MakeList(List l,int num){
             for(int i=1;i<num+1;i++)
                 l.addBackNode(i);
+//            for(int i=1;i<num+1;i++)
+//                l.addFrontNode(i);
     }
     public static void MakeList(List l1,List l2,int num){
         for(int i=0;i<num/2;i++)
             l1.addBackNode(i*2+1);
-        for(int i=1;i<num/2;i++)
+        for(int i=0;i<num/2;i++)
             l2.addBackNode(i*2);
 
     }
     public static void main(String[] args) {
+
         List a1 = new List();
         List a2 = new List();
-        List a3 = new List();
-        List a4 = new List();
-//        List a5 = new List(a4);
 
-//
-//
-//        MakeList(a1,3);
-//        MakeList(a2,2);
-//
-//        MakeList(a3,3);
-//        MakeList(a4,2);
-        MakeList(a1,a2,8);
+
+
+
+/////////////////////////////////////////////////////////////
+//        //addBackList AddFrontList start
+
+//        a1.addBackNode(13);a1.addBackNode(193);a1.addBackNode(4);a1.addBackNode(50);a1.addBackNode(83);
+//        a2.addBackNode(100);a2.addBackNode(10);a2.addBackNode(7);a2.addBackNode(21);a2.addBackNode(1);
+//        a1.addBackList(a2);
+//        a1.addFrontList(a2);
 //
 //        a1.showList();
 //        a2.showList();
-//        a3.showList();
-//        a4.showList();
-//        a5.showList();
+//        //addBackList AddFrontList End
+/////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////
+//        //MergeList Start
 //
-//
-//        a1.addBackList(a2);
-//        a3.addFrontList(a4);
+//        a1.addBackNode(13);a1.addBackNode(193);a1.addBackNode(4);a1.addBackNode(50);a1.addBackNode(83);
+//        a2.addBackNode(100);a2.addBackNode(10);a2.addBackNode(7);a2.addBackNode(21);a2.addBackNode(1);
 //        a1.showList();
-//        a4.showList();
-//        System.out.println();
-        a1.mergeList(a2).showList();
-        a2.showList();
+//        a2.showList();
+//        a1.MergeList(a2);
+//        a1.showList();
+//        a2.showList();
+//
+//        //SimpleMerge End
+/////////////////////////////////////////////////////////////
 
 
+/////////////////////////////////////////////////////////////
+//  // SimpleSplit start
+//
+//        MakeList(a1,10);
+//        a1.showList();
+//
+//        a1.simpleSplit(a2);
+//        a1.showList();
+//        a2.showList();
+//
+//  // SimpleSplit end
+/////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////
+//     SimpleMergeList start
+//
+//     MakeList(a1,a2,8);
+//     a1.showList();
+//     a2.showList();
+//
+//     a1.SimpleMergeList(a2).showList();
+//     a2.showList();
+//
+////      MergeList start
+/////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////
+//        Split start
+
+        a1.MakeList(10);
+        List[] a=new List[a1.getLength()];
+
+        a1.Split(a);
+        for(int i=0;i<a1.getLength();i++)
+        a[i].showList(3);
+
+//        Split end
+/////////////////////////////////////////////////////////////
     }
 }
