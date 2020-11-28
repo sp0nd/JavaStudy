@@ -1,11 +1,11 @@
 package com.tuyano.gradle;
 import javax.swing.plaf.ColorUIResource;
 import java.util.*;
-class Point{
+class CPoint{
 
     private int x,y;
 
-    Point(){}
+    CPoint(){}
     Scanner scan = new Scanner(System.in);
     public void Pointsetting(int X ,int Y){
         x=X;
@@ -15,7 +15,7 @@ class Point{
         System.out.println("Setting Point : " + "(" + x + "," + y + ")");
     }
 }
-class ColorPoint extends Point{
+class ColorPoint extends CPoint{
     private int N,M;
     private String color;
     ColorPoint(){
@@ -39,7 +39,7 @@ class ColorPoint extends Point{
 public class ColorPointEX {
     public static void main(String[] args) {
 
-        Point p= new Point();
+        CPoint p= new CPoint();
         p.Pointsetting(1,2);
         p.ShowPoint();
         ColorPoint cp = new ColorPoint();

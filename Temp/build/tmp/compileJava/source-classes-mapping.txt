@@ -1,9 +1,13 @@
 com/tuyano/gradle/MatrixAddAndMul.java
  com.tuyano.gradle.MatrixAddAndMul
+com/tuyano/gradle/InterfaceQueue.java
+ com.tuyano.gradle.InterfaceQueue
+ com.tuyano.gradle.MyQueue
+ com.tuyano.gradle.containerInterface
 com/tuyano/gradle/ColorPointEX.java
+ com.tuyano.gradle.CPoint
  com.tuyano.gradle.ColorPoint
  com.tuyano.gradle.ColorPointEX
- com.tuyano.gradle.Point
 com/tuyano/gradle/ClassMatrix.java
  com.tuyano.gradle.CalculateAndSave
  com.tuyano.gradle.ClassMatrix
@@ -18,9 +22,11 @@ com/tuyano/gradle/Instanceof.java
  com.tuyano.gradle.hotel
  com.tuyano.gradle.restaurant
  com.tuyano.gradle.shoppingmall
-com/tuyano/gradle/CArray.java
- com.tuyano.gradle.CArray
- com.tuyano.gradle.Circle
+com/tuyano/gradle/Linkedlist.java
+ com.tuyano.gradle.Iterator
+ com.tuyano.gradle.Linkedlist
+ com.tuyano.gradle.List
+ com.tuyano.gradle.Node
 com/tuyano/gradle/MatrixClass.java
  com.tuyano.gradle.MatrixClass
  com.tuyano.gradle.MatrixClass$Calculator
@@ -34,8 +40,17 @@ com/tuyano/gradle/FenceBugGame.java
 com/tuyano/gradle/BookArray.java
  com.tuyano.gradle.BookArray
  com.tuyano.gradle.BookInformation
+com/tuyano/gradle/QueenProblem.java
+ com.tuyano.gradle.Point
+ com.tuyano.gradle.QueenProblem
+ com.tuyano.gradle.QueenStack
+ com.tuyano.gradle.StackInterface
 com/tuyano/gradle/Rectangle.java
  com.tuyano.gradle.Rectangle
+com/tuyano/gradle/AbstractStack.java
+ com.tuyano.gradle.AbstractStack
+ com.tuyano.gradle.ContainerInterface
+ com.tuyano.gradle.MyStack
 com/tuyano/gradle/BugGame.java
  com.tuyano.gradle.BugGame
 com/tuyano/gradle/MethodOverriding.java
@@ -46,8 +61,6 @@ com/tuyano/gradle/MethodOverriding.java
  com.tuyano.gradle.circle
 com/tuyano/gradle/Birds.java
  com.tuyano.gradle.Birds
-com/tuyano/gradle/Linkedlist.java
- com.tuyano.gradle.Iterator
- com.tuyano.gradle.Linkedlist
- com.tuyano.gradle.List
- com.tuyano.gradle.Node
+com/tuyano/gradle/CArray.java
+ com.tuyano.gradle.CArray
+ com.tuyano.gradle.Circle

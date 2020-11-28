@@ -227,13 +227,11 @@ class List {
         l.first=this.first;
     }
     List[] Split(List[] a){
-        List l =this;
-        for(int i=0;i<l.getLength();i++)a[i]=new List();
-        a[0]=l;
+        for(int i=0;i<this.getLength();i++) a[i]=new List();
+        a[0]=this;
         int count=0,idx=1;
-        while(a.length != l.getLength()) {
-            a[count].SimpleMergeList(a[idx]);
-            idx++;
+        while(a.length != this.getLength()) {
+            a[count].SimpleMergeList(a[idx++]);
             if(a[count].getLength()==1) count++;
         }
         return a;
@@ -271,7 +269,7 @@ public class Linkedlist {
 
 /////////////////////////////////////////////////////////////
 //        //addBackList AddFrontList start
-
+//
 //        a1.addBackNode(13);a1.addBackNode(193);a1.addBackNode(4);a1.addBackNode(50);a1.addBackNode(83);
 //        a2.addBackNode(100);a2.addBackNode(10);a2.addBackNode(7);a2.addBackNode(21);a2.addBackNode(1);
 //        a1.addBackList(a2);
@@ -328,14 +326,14 @@ public class Linkedlist {
 
 /////////////////////////////////////////////////////////////
 //        Split start
-
-        a1.MakeList(10);
-        List[] a=new List[a1.getLength()];
-
-        a1.Split(a);
-        for(int i=0;i<a1.getLength();i++)
-        a[i].showList(3);
-
+//
+//        a1.MakeList(10);
+//        List[] a=new List[a1.getLength()];
+//
+//        a1.Split(a);
+//        for(int i=0;i<a1.getLength();i++)
+//        a[i].showList(3);
+//
 //        Split end
 /////////////////////////////////////////////////////////////
     }
