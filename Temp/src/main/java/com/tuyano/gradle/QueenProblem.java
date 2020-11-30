@@ -110,7 +110,7 @@ class QueenStack implements StackInterface{
                     Pop();
                     row--;
                 }
-                
+
                 col++;
 
             }

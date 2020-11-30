@@ -1,0 +1,10 @@
+Generics = 클래스에서 사용할 타입을 클래스 외부에서 설정하는 것
+
+Generics 선언은 class<사용할타입>으로 한다.
+
+Generics 에는 어떤 타입을 사용할 수 있을까?
+
+'Generics Type == 참조형 데이터' 만 가능
+
+int char float double 등과 같은 데이터 타입을 Wrapper class를 통해서
+기본형 데이터 타입을 참조형 데이터 타입으로 바꿔 사용한다.

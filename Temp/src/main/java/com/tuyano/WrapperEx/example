@@ -1,0 +1,26 @@
+example
+   Character c = Character.valueOf('c');
+
+            boxing
+   Integer i = Integer.valueOf(10); //== Integer i = Integer.valueOf("10");
+            unboxing
+   int ii = i.intValue(); // ii=10
+
+            boxing
+   Double d = Double.valueOf(3.14);// == Double d = Double.valueOf("3.14");
+            unboxing
+   Double dd = d.doubleValue(); // dd = 3.14
+
+            boxing
+   Boolean b = Boolean.valueOf(true);
+            unboxing
+   Boolean bb = b.booleanValue(); //bb= true
+
+   Integer ten = 10; // 자동 박싱. Integer ten = Integer.value(10);으로 자동 처리됨
+   int n = ten;      // 자동 언박싱. int n = ten.intValue();로 자동 처리됨
+
+   String s1 = Integer.toString(123); // integer123-->string"123"
+   String s2 = Integer.toHexString(123);// integer123-->Hex "7b"
+   String s3 = Double.toString(3.14); // double 3.14-->string"3.14"
+   String s4 = Character.toString('a');//character 'a'--> string"a"
+   String s5 = Boolean.toString(true);// boolean true--> string "true"

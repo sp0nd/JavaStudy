@@ -16,7 +16,11 @@ plugins {
 //mainClassName = "com.tuyano.gradle.Linkedlist"
 //mainClassName = "com.tuyano.gradle.AbstractStack"
 //mainClassName = "com.tuyano.gradle.InterfaceQueue"
-mainClassName = "com.tuyano.gradle.QueenProblem"
+//mainClassName = "com.tuyano.gradle.QueenProblem"
+//mainClassName = "com.tuyano.CollectionGenerics.VectorPoint"
+//mainClassName = "com.tuyano.CollectionGenerics.ArrayListString"
+//mainClassName = "com.tuyano.CollectionGenerics.IteratorInteger"
+mainClassName = "com.tuyano.CollectionGenerics.HashMapStringString"
 group 'org.example'
 version '1.0-SNAPSHOT'
 
