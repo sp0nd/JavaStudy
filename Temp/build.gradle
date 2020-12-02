@@ -20,7 +20,12 @@ plugins {
 //mainClassName = "com.tuyano.CollectionGenerics.VectorPoint"
 //mainClassName = "com.tuyano.CollectionGenerics.ArrayListString"
 //mainClassName = "com.tuyano.CollectionGenerics.IteratorInteger"
-mainClassName = "com.tuyano.CollectionGenerics.HashMapStringString"
+//mainClassName = "com.tuyano.CollectionGenerics.HashMapStringInteger"
+//mainClassName = "com.tuyano.CollectionGenerics.HashMapStringStudent"
+//mainClassName = "com.tuyano.CollectionGenerics.LinkedListCollectionsSort"
+//mainClassName = "com.tuyano.CollectionGenerics.MakeGenerics"
+//mainClassName = "com.tuyano.CollectionGenerics.GenericsMethod"
+mainClassName = "com.tuyano.CollectionGenerics.Lotto"
 group 'org.example'
 version '1.0-SNAPSHOT'
 

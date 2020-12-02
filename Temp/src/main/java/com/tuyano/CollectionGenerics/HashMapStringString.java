@@ -10,7 +10,7 @@ public class HashMapStringString {
         wordMeaning.put("love","tkfkd");
         wordMeaning.put("apple","tkrhk");
 
-        //
+
         Scanner scan = new Scanner(System.in);
         while(true){
             System.out.println("Enter the word you want to find.");
@@ -19,7 +19,7 @@ public class HashMapStringString {
                 System.out.println("Shut Down System");
                 break;
             }
-            //
+            //Retrieve values by key
             String kor =wordMeaning.get(eng);
             if(kor==null)
                 System.out.println(eng + " is a word that does not exist.");

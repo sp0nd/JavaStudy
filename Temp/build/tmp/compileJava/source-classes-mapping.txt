@@ -1,5 +1,10 @@
 com/tuyano/WrapperEx/StringMethod.java
  com.tuyano.WrapperEx.StringMethod
+com/tuyano/CollectionGenerics/GenericsMethod.java
+ com.tuyano.CollectionGenerics.GenericsMethod
+com/tuyano/CollectionGenerics/HashMapStringStudent.java
+ com.tuyano.CollectionGenerics.HashMapStringStudent
+ com.tuyano.CollectionGenerics.Student
 com/tuyano/gradle/ClassMatrix.java
  com.tuyano.gradle.CalculateAndSave
  com.tuyano.gradle.ClassMatrix
@@ -14,6 +19,9 @@ com/tuyano/gradle/Instanceof.java
  com.tuyano.gradle.hotel
  com.tuyano.gradle.restaurant
  com.tuyano.gradle.shoppingmall
+com/tuyano/gradle/CArray.java
+ com.tuyano.gradle.CArray
+ com.tuyano.gradle.Circle
 com/tuyano/gradle/Linkedlist.java
  com.tuyano.gradle.Iterator
  com.tuyano.gradle.Linkedlist
@@ -23,6 +31,8 @@ com/tuyano/WrapperEx/AutoBoxingUnBoxing.java
  com.tuyano.WrapperEx.AutoBoxingUnBoxing
 com/tuyano/gradle/Book.java
  com.tuyano.gradle.Book
+com/tuyano/CollectionGenerics/HashMapStringInteger.java
+ com.tuyano.CollectionGenerics.HashMapStringInteger
 com/tuyano/gradle/FenceBugGame.java
  com.tuyano.gradle.FenceBugGame
 com/tuyano/CollectionGenerics/VectorInteger.java
@@ -63,11 +73,16 @@ com/tuyano/gradle/Hello2030.java
  com.tuyano.gradle.Hello2030
 com/tuyano/CollectionGenerics/ArrayListString.java
  com.tuyano.CollectionGenerics.ArrayListString
+com/tuyano/CollectionGenerics/LinkedListCollectionsSort.java
+ com.tuyano.CollectionGenerics.LinkedListCollectionsSort
 com/tuyano/CollectionGenerics/IteratorInteger.java
  com.tuyano.CollectionGenerics.IteratorInteger
 com/tuyano/gradle/BookArray.java
  com.tuyano.gradle.BookArray
  com.tuyano.gradle.BookInformation
+com/tuyano/CollectionGenerics/MakeGenerics.java
+ com.tuyano.CollectionGenerics.GenericsStack
+ com.tuyano.CollectionGenerics.MakeGenerics
 com/tuyano/gradle/QueenProblem.java
  com.tuyano.gradle.Point
  com.tuyano.gradle.QueenProblem
@@ -80,6 +95,6 @@ com/tuyano/CollectionGenerics/VectorPoint.java
  com.tuyano.CollectionGenerics.VectorPoint
 com/tuyano/CollectionGenerics/HashMapStringString.java
  com.tuyano.CollectionGenerics.HashMapStringString
-com/tuyano/gradle/CArray.java
- com.tuyano.gradle.CArray
- com.tuyano.gradle.Circle
+com/tuyano/CollectionGenerics/Lotto.java
+ com.tuyano.CollectionGenerics.Lotto
+ com.tuyano.CollectionGenerics.LottoNumberDrawer
