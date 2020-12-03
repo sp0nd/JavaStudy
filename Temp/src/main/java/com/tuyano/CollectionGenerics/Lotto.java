@@ -24,15 +24,40 @@ class LottoNumberDrawer{ //Hashset
     }
 }
 class Buyer{ //LinkedHashMap
+    LinkedHashMap<String,String> buyer = new LinkedHashMap<String,String>();
+    Scanner scan = new Scanner(System.in);
     String name;
     String tel;
     Buyer(String Name,String Tel){
-        LinkedHashMap<String,String> buyer = new LinkedHashMap<String,String>();
         name=Name;
         tel=Tel;
         buyer.put(name,tel);
     }
-    private void IdPwd(){}
+    boolean login(LinkedHashMap<String,String> IdPwd){
+        while(true){
+            System.out.println("Please enter your ID");
+            String id = scan.next();
+            if(id==null) {
+                System.out.println("The ID is invalid or does not exist.");
+                continue;
+            }
+            System.out.println("Please enter a password number.");
+            String pwd=scan.next();
+            if(pwd==buyer.get(id)) {
+                System.out.println("Login complete");
+                return true;
+            }
+            else
+                System.out.println("Please re-enter the login failure ID and password.");
+            if(id.equals("exit")||pwd.equals("exit")) {
+                break;
+            }
+        }
+        return false;
+    }
+    void buyerInfo(){
+        if(login()==true)
+    }
 }
 class seller{
     public LottoNumberDrawer Lotto;

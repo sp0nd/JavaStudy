@@ -19,7 +19,7 @@ public class HashMapStringString {
                 System.out.println("Shut Down System");
                 break;
             }
-            //Retrieve values by key
+            //Retrieve values by keys
             String kor =wordMeaning.get(eng);
             if(kor==null)
                 System.out.println(eng + " is a word that does not exist.");

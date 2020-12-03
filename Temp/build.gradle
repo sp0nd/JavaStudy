@@ -16,7 +16,7 @@ plugins {
 //mainClassName = "com.tuyano.gradle.Linkedlist"
 //mainClassName = "com.tuyano.gradle.AbstractStack"
 //mainClassName = "com.tuyano.gradle.InterfaceQueue"
-//mainClassName = "com.tuyano.gradle.QueenProblem"
+mainClassName = "com.tuyano.gradle.QueenProblem"
 //mainClassName = "com.tuyano.CollectionGenerics.VectorPoint"
 //mainClassName = "com.tuyano.CollectionGenerics.ArrayListString"
 //mainClassName = "com.tuyano.CollectionGenerics.IteratorInteger"
@@ -25,7 +25,7 @@ plugins {
 //mainClassName = "com.tuyano.CollectionGenerics.LinkedListCollectionsSort"
 //mainClassName = "com.tuyano.CollectionGenerics.MakeGenerics"
 //mainClassName = "com.tuyano.CollectionGenerics.GenericsMethod"
-mainClassName = "com.tuyano.CollectionGenerics.Lotto"
+//mainClassName = "com.tuyano.CollectionGenerics.Lotto"
 group 'org.example'
 version '1.0-SNAPSHOT'
 
