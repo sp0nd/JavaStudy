@@ -18,13 +18,13 @@ class QueenStack implements StackInterface{
     int[][] board;
     QueenStack(int Size){
         size=Size;
-        top=0;
+        top=-1;
         data=new Point[size];
         board=new int[size][size];
     }
 
-    public boolean IsEmpty(){return top==0;}
-    public boolean IsFull(){return top==size;}
+    public boolean IsEmpty(){return top==-1;}
+    public boolean IsFull(){return top==size - 1;}
     public int Element(){
         if(data==null) {System.out.println("Already Empty."); return 1;}
         if(IsFull()) {System.out.println("Already Full."); return 1;}
@@ -35,13 +35,13 @@ class QueenStack implements StackInterface{
     }
 
     public void Push(Point p){
-
-        if(!IsFull()) data[++top]=p;
+        if(!IsFull()){ data[++top]=p;}
         else System.out.println("Stack List is Full.");
     }
 
     public Point Pop(){
-        if(!IsEmpty()) return data[top--];
+        if(!IsEmpty())  return data[top--]=null;
+
         else{
             System.out.println("Stack List is Empty.");
             return null;
@@ -53,6 +53,7 @@ class QueenStack implements StackInterface{
                 System.out.print(" " + board[i][j] + " ");
             System.out.println();
         }
+        System.out.println();
         return board;
     }
 //    boolean CheckMove(int currentRow, int col){
@@ -83,7 +84,7 @@ class QueenStack implements StackInterface{
     boolean CheckMove(int row, int col){
 
         for ( int i = 0; i < row; i++ ) {
-            for ( int j = 0; j < 4; j++ ) {
+            for ( int j = 0; j < size; j++ ) {
                 if ( board[i][j] == 1 ) {
                     if ( j == col || slope(i, j, row, col) ) return false;
                 }
@@ -93,35 +94,47 @@ class QueenStack implements StackInterface{
     }
 
     int[][] SolveQueen(){
+        int[][] copy= new int[size][size];
         int row=0,col=0;
-        while(row!=size-1)
+        while(row<size)
         {
+
             if(CheckMove(row,col)){
                 board[row][col]=1;
                 Push(new Point(row,col));
-                row++;
+                if(row<size-1)row++;
+                col=0;
             }
             else { // CheckMove(row,col) != true
-                if(size-1==col)
-                {
-                    board[data[top].x][data[top].y]=0;
-                    if(size-1==data[top].y){ row--; Pop();}
+                if(col==size-1){ //col== 3
+                    row=data[top].x;
                     col=data[top].y;
+
+                    board[row][col]=0;
                     Pop();
-                    row--;
                 }
-
-                col++;
-
+                if(col<size-1) col++;
+                else {
+                    row=data[top].x;
+                    col=data[top].y;
+                    board[row][col]=0;
+                    col++;
+                    Pop();
+                }
             }
+            if(top==size-1&&data[top]!=null) break;
         }
-        return board;
+        for(int i=0;i<size;i++)
+            for(int j=0;j<size;j++)
+                copy[i][j]=board[i][j];
+        return copy;
     }
 }
 public class QueenProblem {
     public static void main(String[] args) {
-        QueenStack stack =new QueenStack(4); //stack size + board Size
+        QueenStack stack =new QueenStack(8); //stack size + board Size
         stack.PrintBoard(stack.board);
+
         stack.PrintBoard(stack.SolveQueen());
     }
 }
